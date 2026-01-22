@@ -6,3 +6,5 @@ class Program
     {
         int a = 20, b = 5;
         Console.WriteLine("Division = " + (a / b));
+    }
+}    
