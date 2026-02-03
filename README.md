@@ -28,17 +28,29 @@ Version Control: Git & GitHub
 Repository Structure
 CSharp-300-Practice-Programs
 │
+
 ├── 01_Basics
+
 ├── 02_Conditionals
+
 ├── 03_Loops
+
 ├── 04_Arrays
+
 ├── 05_Strings
+
 ├── 06_Methods
+
 ├── 07_OOP
+
 ├── 08_Collections
+
 ├── 09_ExceptionHandling
+
 ├── 10_FileHandling
+
 ├── 11_LINQ
+
 ├── 12_MiniProjects
 
 Topics Covered
@@ -62,6 +74,9 @@ By completing these 300 programs, I have gained confidence in C# syntax, improve
 Author
 
 Name: Yash Patil
+
 Department: CSD
+
 Semester: 6
+
 Subject: C# Programming (Practical)
