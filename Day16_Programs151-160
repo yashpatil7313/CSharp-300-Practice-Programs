@@ -1,0 +1,276 @@
+📁 Day16_Programs151-160
+
+---
+
+Program151_ArrayListExample.cs
+
+```csharp
+using System;
+using System.Collections;
+
+class Program151_ArrayListExample
+{
+    static void Main()
+    {
+        ArrayList list = new ArrayList();
+        list.Add(10);
+        list.Add(20);
+        list.Add(30);
+
+        foreach(var item in list)
+        {
+            Console.Write(item + " ");
+        }
+    }
+}
+```
+
+---
+
+Program152_ListExample.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program152_ListExample
+{
+    static void Main()
+    {
+        List<int> list = new List<int>() {1,2,3,4,5};
+
+        list.Add(6);
+
+        foreach(int num in list)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
+```
+
+---
+
+Program153_DictionaryExample.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program153_DictionaryExample
+{
+    static void Main()
+    {
+        Dictionary<int, string> dict = new Dictionary<int, string>();
+
+        dict.Add(1, "Aarti");
+        dict.Add(2, "Yash");
+
+        foreach(var item in dict)
+        {
+            Console.WriteLine(item.Key + " : " + item.Value);
+        }
+    }
+}
+```
+
+---
+
+Program154_StackExample.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program154_StackExample
+{
+    static void Main()
+    {
+        Stack<int> stack = new Stack<int>();
+
+        stack.Push(10);
+        stack.Push(20);
+        stack.Push(30);
+
+        Console.WriteLine("Top Element: " + stack.Peek());
+
+        while(stack.Count > 0)
+        {
+            Console.WriteLine(stack.Pop());
+        }
+    }
+}
+```
+
+---
+
+Program155_QueueExample.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program155_QueueExample
+{
+    static void Main()
+    {
+        Queue<int> queue = new Queue<int>();
+
+        queue.Enqueue(10);
+        queue.Enqueue(20);
+        queue.Enqueue(30);
+
+        Console.WriteLine("Front Element: " + queue.Peek());
+
+        while(queue.Count > 0)
+        {
+            Console.WriteLine(queue.Dequeue());
+        }
+    }
+}
+```
+
+---
+
+Program156_TryCatchExample.cs
+
+```csharp
+using System;
+
+class Program156_TryCatchExample
+{
+    static void Main()
+    {
+        try
+        {
+            int a = 10, b = 0;
+            int result = a / b;
+            Console.WriteLine(result);
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine("Error: " + e.Message);
+        }
+    }
+}
+```
+
+---
+
+Program157_FinallyExample.cs
+
+```csharp
+using System;
+
+class Program157_FinallyExample
+{
+    static void Main()
+    {
+        try
+        {
+            Console.WriteLine("Try Block");
+        }
+        catch
+        {
+            Console.WriteLine("Catch Block");
+        }
+        finally
+        {
+            Console.WriteLine("Finally Block Executed");
+        }
+    }
+}
+```
+
+---
+
+Program158_CustomException.cs
+
+```csharp
+using System;
+
+class MyException : Exception
+{
+    public MyException(string message) : base(message) {}
+}
+
+class Program158_CustomException
+{
+    static void Main()
+    {
+        try
+        {
+            throw new MyException("Custom Error Occurred");
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
+```
+
+---
+
+Program159_MultipleCatch.cs
+
+```csharp
+using System;
+
+class Program159_MultipleCatch
+{
+    static void Main()
+    {
+        try
+        {
+            int[] arr = {1,2,3};
+            Console.WriteLine(arr[5]);
+        }
+        catch(IndexOutOfRangeException)
+        {
+            Console.WriteLine("Index Error");
+        }
+        catch(Exception)
+        {
+            Console.WriteLine("General Error");
+        }
+    }
+}
+```
+
+---
+
+Program160_ThrowKeywordExample.cs
+
+```csharp
+using System;
+
+class Program160_ThrowKeywordExample
+{
+    static void CheckAge(int age)
+    {
+        if(age < 18)
+        {
+            throw new Exception("Not Eligible");
+        }
+        else
+        {
+            Console.WriteLine("Eligible");
+        }
+    }
+
+    static void Main()
+    {
+        try
+        {
+            CheckAge(16);
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
+```
+
+---

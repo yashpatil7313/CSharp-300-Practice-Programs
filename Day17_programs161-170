@@ -1,0 +1,204 @@
+📁 Day17_Programs161-170
+
+---
+
+Program161_WriteToFile.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program161_WriteToFile
+{
+    static void Main()
+    {
+        File.WriteAllText("test.txt", "Hello C# File Handling");
+        Console.WriteLine("Data Written Successfully");
+    }
+}
+```
+
+---
+
+Program162_ReadFromFile.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program162_ReadFromFile
+{
+    static void Main()
+    {
+        string data = File.ReadAllText("test.txt");
+        Console.WriteLine(data);
+    }
+}
+```
+
+---
+
+Program163_AppendToFile.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program163_AppendToFile
+{
+    static void Main()
+    {
+        File.AppendAllText("test.txt", "\nAppended Text");
+        Console.WriteLine("Data Appended");
+    }
+}
+```
+
+---
+
+Program164_CheckFileExists.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program164_CheckFileExists
+{
+    static void Main()
+    {
+        if(File.Exists("test.txt"))
+            Console.WriteLine("File Exists");
+        else
+            Console.WriteLine("File Not Found");
+    }
+}
+```
+
+---
+
+Program165_DeleteFile.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program165_DeleteFile
+{
+    static void Main()
+    {
+        if(File.Exists("test.txt"))
+        {
+            File.Delete("test.txt");
+            Console.WriteLine("File Deleted");
+        }
+    }
+}
+```
+
+---
+
+Program166_CreateDirectory.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program166_CreateDirectory
+{
+    static void Main()
+    {
+        Directory.CreateDirectory("MyFolder");
+        Console.WriteLine("Directory Created");
+    }
+}
+```
+
+---
+
+Program167_GetFilesInDirectory.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program167_GetFilesInDirectory
+{
+    static void Main()
+    {
+        string[] files = Directory.GetFiles(".");
+
+        foreach(string file in files)
+        {
+            Console.WriteLine(file);
+        }
+    }
+}
+```
+
+---
+
+Program168_WriteUsingStreamWriter.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program168_WriteUsingStreamWriter
+{
+    static void Main()
+    {
+        using(StreamWriter sw = new StreamWriter("file.txt"))
+        {
+            sw.WriteLine("Hello from StreamWriter");
+        }
+
+        Console.WriteLine("Data Written");
+    }
+}
+```
+
+---
+
+Program169_ReadUsingStreamReader.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program169_ReadUsingStreamReader
+{
+    static void Main()
+    {
+        using(StreamReader sr = new StreamReader("file.txt"))
+        {
+            string line;
+            while((line = sr.ReadLine()) != null)
+            {
+                Console.WriteLine(line);
+            }
+        }
+    }
+}
+```
+
+---
+
+Program170_FileInfoExample.cs
+
+```csharp
+using System;
+using System.IO;
+
+class Program170_FileInfoExample
+{
+    static void Main()
+    {
+        FileInfo file = new FileInfo("file.txt");
+
+        Console.WriteLine("File Name: " + file.Name);
+        Console.WriteLine("Size: " + file.Length + " bytes");
+    }
+}
+```
+
+---

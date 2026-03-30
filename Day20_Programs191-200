@@ -1,0 +1,272 @@
+📁 Day20_Programs191-200
+
+---
+
+Program191_SimpleCalculator.cs
+
+```csharp
+using System;
+
+class Program191_SimpleCalculator
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter operator (+ - * /): ");
+        char op = Convert.ToChar(Console.ReadLine());
+
+        switch(op)
+        {
+            case '+': Console.WriteLine("Result = " + (a + b)); break;
+            case '-': Console.WriteLine("Result = " + (a - b)); break;
+            case '*': Console.WriteLine("Result = " + (a * b)); break;
+            case '/': Console.WriteLine("Result = " + (a / b)); break;
+            default: Console.WriteLine("Invalid Operator"); break;
+        }
+    }
+}
+```
+
+---
+
+Program192_NumberGuessingGame.cs
+
+```csharp
+using System;
+
+class Program192_NumberGuessingGame
+{
+    static void Main()
+    {
+        Random rand = new Random();
+        int number = rand.Next(1, 101);
+
+        int guess;
+
+        do
+        {
+            Console.Write("Guess number (1-100): ");
+            guess = Convert.ToInt32(Console.ReadLine());
+
+            if(guess > number)
+                Console.WriteLine("Too High");
+            else if(guess < number)
+                Console.WriteLine("Too Low");
+            else
+                Console.WriteLine("Correct!");
+        }
+        while(guess != number);
+    }
+}
+```
+
+---
+
+Program193_PalindromeChecker.cs
+
+```csharp
+using System;
+
+class Program193_PalindromeChecker
+{
+    static void Main()
+    {
+        Console.Write("Enter string: ");
+        string str = Console.ReadLine();
+
+        string rev = "";
+
+        for(int i=str.Length-1;i>=0;i--)
+            rev += str[i];
+
+        if(str == rev)
+            Console.WriteLine("Palindrome");
+        else
+            Console.WriteLine("Not Palindrome");
+    }
+}
+```
+
+---
+
+Program194_FactorialCalculator.cs
+
+```csharp
+using System;
+
+class Program194_FactorialCalculator
+{
+    static void Main()
+    {
+        Console.Write("Enter number: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        int fact = 1;
+
+        for(int i=1;i<=n;i++)
+            fact *= i;
+
+        Console.WriteLine("Factorial = " + fact);
+    }
+}
+```
+
+---
+
+Program195_PrimeNumberChecker.cs
+
+```csharp
+using System;
+
+class Program195_PrimeNumberChecker
+{
+    static void Main()
+    {
+        Console.Write("Enter number: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        bool isPrime = true;
+
+        for(int i=2;i<=n/2;i++)
+        {
+            if(n % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        Console.WriteLine(isPrime ? "Prime" : "Not Prime");
+    }
+}
+```
+
+---
+
+Program196_TodoListBasic.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program196_TodoListBasic
+{
+    static void Main()
+    {
+        List<string> tasks = new List<string>();
+
+        tasks.Add("Study");
+        tasks.Add("Practice C#");
+
+        Console.WriteLine("Todo List:");
+
+        foreach(var t in tasks)
+            Console.WriteLine("- " + t);
+    }
+}
+```
+
+---
+
+Program197_SimpleInterestCalculator.cs
+
+```csharp
+using System;
+
+class Program197_SimpleInterestCalculator
+{
+    static void Main()
+    {
+        Console.Write("Enter Principal: ");
+        double p = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter Rate: ");
+        double r = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter Time: ");
+        double t = Convert.ToDouble(Console.ReadLine());
+
+        double si = (p * r * t) / 100;
+
+        Console.WriteLine("Simple Interest = " + si);
+    }
+}
+```
+
+---
+
+Program198_TemperatureConverter.cs
+
+```csharp
+using System;
+
+class Program198_TemperatureConverter
+{
+    static void Main()
+    {
+        Console.Write("Enter Celsius: ");
+        double c = Convert.ToDouble(Console.ReadLine());
+
+        double f = (c * 9 / 5) + 32;
+
+        Console.WriteLine("Fahrenheit = " + f);
+    }
+}
+```
+
+---
+
+Program199_StudentGradeSystem.cs
+
+```csharp
+using System;
+
+class Program199_StudentGradeSystem
+{
+    static void Main()
+    {
+        Console.Write("Enter marks: ");
+        int marks = Convert.ToInt32(Console.ReadLine());
+
+        if(marks >= 90) Console.WriteLine("Grade A");
+        else if(marks >= 75) Console.WriteLine("Grade B");
+        else if(marks >= 50) Console.WriteLine("Grade C");
+        else Console.WriteLine("Fail");
+    }
+}
+```
+
+---
+
+Program200_BasicLoginSystem.cs
+
+```csharp
+using System;
+
+class Program200_BasicLoginSystem
+{
+    static void Main()
+    {
+        string username = "admin";
+        string password = "1234";
+
+        Console.Write("Enter Username: ");
+        string u = Console.ReadLine();
+
+        Console.Write("Enter Password: ");
+        string p = Console.ReadLine();
+
+        if(u == username && p == password)
+            Console.WriteLine("Login Successful");
+        else
+            Console.WriteLine("Invalid Credentials");
+    }
+}
+```
+
+---

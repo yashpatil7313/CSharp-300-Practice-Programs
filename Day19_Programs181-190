@@ -1,0 +1,230 @@
+📁 Day19_Programs181-190
+
+---
+
+Program181_ReverseWordsInString.cs
+
+```csharp
+using System;
+
+class Program181_ReverseWordsInString
+{
+    static void Main()
+    {
+        string str = "Hello World from CSharp";
+        string[] words = str.Split(' ');
+
+        Array.Reverse(words);
+
+        Console.WriteLine(string.Join(" ", words));
+    }
+}
+```
+
+---
+
+Program182_CountCharacters.cs
+
+```csharp
+using System;
+
+class Program182_CountCharacters
+{
+    static void Main()
+    {
+        string str = "hello";
+        int count = str.Length;
+
+        Console.WriteLine("Total Characters = " + count);
+    }
+}
+```
+
+---
+
+Program183_FindDuplicateCharacters.cs
+
+```csharp
+using System;
+
+class Program183_FindDuplicateCharacters
+{
+    static void Main()
+    {
+        string str = "programming";
+
+        for(int i=0;i<str.Length;i++)
+        {
+            for(int j=i+1;j<str.Length;j++)
+            {
+                if(str[i] == str[j])
+                {
+                    Console.WriteLine(str[i]);
+                    break;
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+Program184_RemoveDuplicateCharacters.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program184_RemoveDuplicateCharacters
+{
+    static void Main()
+    {
+        string str = "programming";
+
+        string result = new string(str.Distinct().ToArray());
+
+        Console.WriteLine(result);
+    }
+}
+```
+
+---
+
+Program185_StringFrequency.cs
+
+```csharp
+using System;
+
+class Program185_StringFrequency
+{
+    static void Main()
+    {
+        string str = "aabbcc";
+
+        foreach(char ch in str)
+        {
+            int count = 0;
+
+            foreach(char c in str)
+            {
+                if(ch == c)
+                    count++;
+            }
+
+            Console.WriteLine(ch + " = " + count);
+        }
+    }
+}
+```
+
+---
+
+Program186_CheckAnagram.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program186_CheckAnagram
+{
+    static void Main()
+    {
+        string s1 = "listen";
+        string s2 = "silent";
+
+        var a = s1.OrderBy(c => c);
+        var b = s2.OrderBy(c => c);
+
+        if(a.SequenceEqual(b))
+            Console.WriteLine("Anagram");
+        else
+            Console.WriteLine("Not Anagram");
+    }
+}
+```
+
+---
+
+Program187_RemoveSpecialCharacters.cs
+
+```csharp
+using System;
+using System.Text.RegularExpressions;
+
+class Program187_RemoveSpecialCharacters
+{
+    static void Main()
+    {
+        string str = "Hello@123#World!";
+        string result = Regex.Replace(str, "[^a-zA-Z0-9]", "");
+
+        Console.WriteLine(result);
+    }
+}
+```
+
+---
+
+Program188_CountDigitsInString.cs
+
+```csharp
+using System;
+
+class Program188_CountDigitsInString
+{
+    static void Main()
+    {
+        string str = "abc12345";
+        int count = 0;
+
+        foreach(char ch in str)
+        {
+            if(char.IsDigit(ch))
+                count++;
+        }
+
+        Console.WriteLine("Digits = " + count);
+    }
+}
+```
+
+---
+
+Program189_StringToInteger.cs
+
+```csharp
+using System;
+
+class Program189_StringToInteger
+{
+    static void Main()
+    {
+        string str = "123";
+        int num = Convert.ToInt32(str);
+
+        Console.WriteLine("Integer = " + num);
+    }
+}
+```
+
+---
+
+Program190_IntegerToString.cs
+
+```csharp
+using System;
+
+class Program190_IntegerToString
+{
+    static void Main()
+    {
+        int num = 456;
+        string str = num.ToString();
+
+        Console.WriteLine("String = " + str);
+    }
+}
+```
+
+---

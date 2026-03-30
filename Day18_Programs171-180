@@ -1,0 +1,228 @@
+📁 Day18_Programs171-180
+
+---
+
+Program171_LINQWhereExample.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program171_LINQWhereExample
+{
+    static void Main()
+    {
+        int[] arr = {1,2,3,4,5,6};
+
+        var even = arr.Where(x => x % 2 == 0);
+
+        foreach(var num in even)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
+```
+
+---
+
+Program172_LINQSelectExample.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program172_LINQSelectExample
+{
+    static void Main()
+    {
+        int[] arr = {1,2,3};
+
+        var square = arr.Select(x => x * x);
+
+        foreach(var num in square)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
+```
+
+---
+
+Program173_LINQOrderBy.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program173_LINQOrderBy
+{
+    static void Main()
+    {
+        int[] arr = {5,2,8,1,3};
+
+        var sorted = arr.OrderBy(x => x);
+
+        foreach(var num in sorted)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
+```
+
+---
+
+Program174_LINQGroupBy.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program174_LINQGroupBy
+{
+    static void Main()
+    {
+        string[] names = {"Aarti","Aman","Yash","Yogesh"};
+
+        var group = names.GroupBy(x => x[0]);
+
+        foreach(var g in group)
+        {
+            Console.WriteLine("Group: " + g.Key);
+            foreach(var name in g)
+            {
+                Console.WriteLine(name);
+            }
+        }
+    }
+}
+```
+
+---
+
+Program175_LINQFirstOrDefault.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program175_LINQFirstOrDefault
+{
+    static void Main()
+    {
+        int[] arr = {10,20,30};
+
+        var result = arr.FirstOrDefault(x => x > 15);
+
+        Console.WriteLine(result);
+    }
+}
+```
+
+---
+
+Program176_LINQCount.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program176_LINQCount
+{
+    static void Main()
+    {
+        int[] arr = {1,2,3,4,5,6};
+
+        int count = arr.Count(x => x % 2 == 0);
+
+        Console.WriteLine("Even Count = " + count);
+    }
+}
+```
+
+---
+
+Program177_LINQSum.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program177_LINQSum
+{
+    static void Main()
+    {
+        int[] arr = {1,2,3,4,5};
+
+        int sum = arr.Sum();
+
+        Console.WriteLine("Sum = " + sum);
+    }
+}
+```
+
+---
+
+Program178_LINQMaxMin.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program178_LINQMaxMin
+{
+    static void Main()
+    {
+        int[] arr = {10,50,20,5};
+
+        Console.WriteLine("Max = " + arr.Max());
+        Console.WriteLine("Min = " + arr.Min());
+    }
+}
+```
+
+---
+
+Program179_LINQAverage.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program179_LINQAverage
+{
+    static void Main()
+    {
+        int[] arr = {10,20,30};
+
+        Console.WriteLine("Average = " + arr.Average());
+    }
+}
+```
+
+---
+
+Program180_LINQAnyAll.cs
+
+```csharp
+using System;
+using System.Linq;
+
+class Program180_LINQAnyAll
+{
+    static void Main()
+    {
+        int[] arr = {2,4,6,8};
+
+        bool anyOdd = arr.Any(x => x % 2 != 0);
+        bool allEven = arr.All(x => x % 2 == 0);
+
+        Console.WriteLine("Any Odd: " + anyOdd);
+        Console.WriteLine("All Even: " + allEven);
+    }
+}
+```
+
+---
